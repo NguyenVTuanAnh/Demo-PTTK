@@ -86,7 +86,7 @@
 
         .btn-back {
             display: inline-block;
-            background: #007bff;
+            background: black;
             color: white;
             padding: 10px 20px;
             border-radius: 6px;
@@ -96,7 +96,8 @@
         }
 
         .btn-back:hover {
-            background: #0056b3;
+            background: white;
+            color: black;
         }
     </style>
 </head>
@@ -108,7 +109,7 @@
         BorrowSlip borrowSlip = (BorrowSlip) request.getAttribute("borrowSlip");
         if (borrowSlip == null) {
     %>
-    <p style="text-align:center; color:red;">❌ Không tìm thấy phiếu mượn.</p>
+    <p style="text-align:center; color:red;"> Không tìm thấy phiếu mượn.</p>
     <%
     } else {
     %>

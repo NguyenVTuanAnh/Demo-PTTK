@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        // Khi người dùng bấm nút "Login" ở home-reader.jsp, nó vào đây
+        // Khi người dùng bấm nút "Login" ở reader-home.jsp, nó vào đây
         req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 
@@ -51,10 +51,10 @@ public class LoginServlet extends HttpServlet {
             String role = user.getRole();
             switch (role) {
                 case "READER":
-                    resp.sendRedirect("home-reader.jsp");
+                    resp.sendRedirect("reader-home.jsp");
                     break;
                 case "MANAGER":
-                    resp.sendRedirect("home-manager.jsp");
+                    resp.sendRedirect("manager-home.jsp");
                     break;
                 case "STAFF":
                     resp.sendRedirect("home-staff.jsp");

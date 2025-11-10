@@ -8,7 +8,6 @@
         /* --- Toàn bộ trang --- */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb);
             margin: 0;
             padding: 0;
         }
@@ -25,7 +24,7 @@
         }
 
         h1 {
-            color: #1565c0;
+            color: black;
             margin-bottom: 25px;
         }
 
@@ -37,7 +36,7 @@
         }
 
         table, th, td {
-            border: 1px solid #90caf9;
+            border: 1px solid black;
         }
 
         th, td {
@@ -47,8 +46,6 @@
 
         th {
             width: 40%;
-            background-color: #e3f2fd;
-            color: #0d47a1;
         }
 
         input[type="text"],
@@ -56,13 +53,13 @@
         input[type="email"] {
             width: 95%;
             padding: 6px;
-            border: 1px solid #90caf9;
+            border: 3px solid black;
             border-radius: 6px;
         }
 
         /* --- Nút đăng ký --- */
         button {
-            background-color: #42a5f5;
+            background-color: black;
             color: white;
             border: none;
             padding: 10px 25px;
@@ -73,7 +70,7 @@
         }
 
         button:hover {
-            background-color: #1e88e5;
+            background-color: green;
         }
 
         /* --- Hiệu ứng hover nhẹ --- */

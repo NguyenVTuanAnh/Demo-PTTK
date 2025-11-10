@@ -8,7 +8,6 @@
         /* --- Toàn bộ trang --- */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb);
             margin: 0;
             padding: 0;
         }
@@ -25,7 +24,7 @@
         }
 
         h1 {
-            color: #1565c0;
+            color: black;
             margin-bottom: 10px;
         }
 
@@ -44,7 +43,7 @@
         }
 
         button {
-            background-color: #42a5f5;
+            background-color: black;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -56,7 +55,8 @@
         }
 
         button:hover {
-            background-color: #1e88e5;
+            background-color: white;
+            color: black;
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }

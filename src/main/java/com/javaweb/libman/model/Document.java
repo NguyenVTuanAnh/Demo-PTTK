@@ -4,12 +4,11 @@ public class Document {
     private int id;
     private String name;
     private String type;
-    private int quantity;
 
-    public Document(String name, String type, int quantity) {
+    public Document(int id, String name, String type) {
+        this.id = id;
         this.name = name;
         this.type = type;
-        this.quantity = quantity;
     }
 
     public Document() {
@@ -39,11 +38,4 @@ public class Document {
         this.type = type;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 }

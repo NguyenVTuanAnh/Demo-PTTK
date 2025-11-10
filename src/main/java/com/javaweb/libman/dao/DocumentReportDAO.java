@@ -10,7 +10,8 @@ import java.util.List;
 public class DocumentReportDAO extends DAO{
     public List<DocumentReport> getBorrowedDocumentInPeriod(LocalDate startDate, LocalDate endDate){
         List<DocumentReport> list = new ArrayList<>();
-        String sql = "SELECT d.id, d.name, COUNT(bd.document_id) AS total_loans " +
+        String sql = "SELECT " +
+                " d.id, d.name, d.type, COUNT(bd.document_id) AS total_loans " +
                 "FROM document d " +
                 "JOIN borrow_detail bd ON d.id = bd.document_id " +
                 "JOIN borrow_slip bs ON bd.borrow_slip_id = bs.id " +
@@ -43,6 +44,7 @@ public class DocumentReportDAO extends DAO{
                 list.add(new DocumentReport(
                         rs.getInt("id"),
                         rs.getString("name"),
+                        rs.getString("type"),
                         rs.getInt("total_loans")
                 ));
             }

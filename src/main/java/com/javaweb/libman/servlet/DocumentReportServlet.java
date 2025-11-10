@@ -36,6 +36,7 @@ public class DocumentReportServlet extends HttpServlet {
         LocalDate endDate = (endDateStr != null && !endDateStr.isEmpty())
                 ? LocalDate.parse(endDateStr)
                 : null;
+
         DocumentReportDAO documentReportDAO = new DocumentReportDAO();
         List<DocumentReport> reports = documentReportDAO.getBorrowedDocumentInPeriod(startDate, endDate);
 

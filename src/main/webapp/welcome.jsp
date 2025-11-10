@@ -8,7 +8,7 @@
     /* --- Tổng thể trang --- */
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #bbdefb);
+      /*background: linear-gradient(to right, #e3f2fd, #bbdefb);*/
       margin: 0;
       padding: 0;
     }
@@ -32,12 +32,12 @@
 
     /* --- Tiêu đề --- */
     h1 {
-      color: #1565c0;
+      color: black;
       margin-bottom: 15px;
     }
 
     h2 {
-      color: #2e7d32;
+      color: red;
       margin-bottom: 30px;
     }
 
@@ -47,14 +47,15 @@
       font-size: 16px;
       border: none;
       border-radius: 8px;
-      background-color: #42a5f5;
+      background-color: black;
       color: white;
       cursor: pointer;
       transition: 0.2s;
     }
 
     button:hover {
-      background-color: #1e88e5;
+      background-color: green;
+      color: black;
     }
 
     /* --- Dòng chữ nhỏ cuối trang --- */
@@ -67,7 +68,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>Welcome to Library</h1>
+  <h1>Hệ Thống Quản Lý Thư Viện</h1>
 
   <%
     String username = (String) session.getAttribute("username");

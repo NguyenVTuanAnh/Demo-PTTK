@@ -19,12 +19,6 @@ import java.util.Timer;
 
 @WebServlet("/card-registration")
 public class CardRegistrationServlet extends HttpServlet {
-    private ReaderCardDAO readerCardDAO;
-
-    @Override
-    public void init() {
-        readerCardDAO = new ReaderCardDAO();
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -50,6 +44,8 @@ public class CardRegistrationServlet extends HttpServlet {
 
         HttpSession session = req.getSession(false);
         if (session != null) {
+            ReaderCardDAO readerCardDAO = new ReaderCardDAO();
+
             User currentUser = (User) session.getAttribute("user");
             if (currentUser != null) {
                 System.out.println("Người đang đăng nhập: " + currentUser.getName());
@@ -57,18 +53,19 @@ public class CardRegistrationServlet extends HttpServlet {
                 resp.sendRedirect("login.jsp");
             }
             Reader reader = (Reader) currentUser;
+
             int expiry = Integer.parseInt(req.getParameter("expiry"));
             LocalDate issueDate = LocalDate.now();
             LocalDate expiryDate = issueDate.plusMonths(expiry);
             ReaderCard readerCard = new ReaderCard(issueDate, expiryDate, "", reader);
+
             Boolean success = readerCardDAO.addCard(readerCard);
 
             if (success) {
-                resp.sendRedirect("home-reader.jsp");
+                resp.sendRedirect("reader-home.jsp");
             } else {
                 resp.sendRedirect("card-registration.jsp");
             }
-
         }
 
     }

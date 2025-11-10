@@ -8,7 +8,7 @@
         /* --- Toàn trang --- */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            /*background: linear-gradient(to right, #e3f2fd, #bbdefb);*/
             margin: 0;
             padding: 0;
         }
@@ -25,7 +25,7 @@
         }
 
         h2 {
-            color: #1565c0;
+            color: black;
             margin-bottom: 25px;
         }
 
@@ -34,7 +34,7 @@
             display: block;
             text-align: left;
             font-weight: bold;
-            color: #0d47a1;
+            color: black;
             margin-bottom: 6px;
         }
 
@@ -43,7 +43,7 @@
             width: 100%;
             padding: 8px 10px;
             margin-bottom: 18px;
-            border: 1px solid #90caf9;
+            border: 1px solid black;
             border-radius: 6px;
             font-size: 14px;
         }
@@ -56,7 +56,7 @@
 
         /* --- Nút đăng nhập --- */
         button {
-            background-color: #42a5f5;
+            background-color: black;
             color: white;
             border: none;
             padding: 10px 25px;
@@ -67,7 +67,8 @@
         }
 
         button:hover {
-            background-color: #1e88e5;
+            background-color: green;
+            color: white;
         }
 
         /* --- Thông báo lỗi --- */
@@ -77,12 +78,12 @@
             font-weight: bold;
         }
 
-        /* --- Hiệu ứng hover toàn khung --- */
-        .container:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: 0.3s;
-        }
+        /*!* --- Hiệu ứng hover toàn khung --- *!*/
+        /*.container:hover {*/
+        /*    transform: translateY(-3px);*/
+        /*    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);*/
+        /*    transition: 0.3s;*/
+        /*}*/
     </style>
 </head>
 <body>

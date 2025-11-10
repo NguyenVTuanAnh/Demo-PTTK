@@ -8,7 +8,6 @@
         /* --- Tổng thể trang --- */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb); /* xanh nhạt pastel */
             margin: 0;
             padding: 0;
         }
@@ -32,7 +31,7 @@
 
         /* --- Tiêu đề --- */
         h2 {
-            color: #1565c0;
+            color: black;
             margin-bottom: 40px;
             font-size: 26px;
         }
@@ -56,19 +55,19 @@
         }
 
         .btn-search {
-            background-color: #42a5f5;
+            background-color: black;
         }
 
         .btn-register {
-            background-color: #66bb6a;
+            background-color: black;
         }
 
         .btn-search:hover {
-            background-color: #1e88e5;
+            background-color: green;
         }
 
         .btn-register:hover {
-            background-color: #43a047;
+            background-color: green;
         }
 
         /* --- Dòng chữ nhỏ cuối trang --- */
