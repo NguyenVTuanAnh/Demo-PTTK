@@ -125,11 +125,10 @@
     <form action="document-report" method="post">
         <label>Từ ngày:</label>
         <input type="date" name="startDate"
-               value="<%=request.getAttribute("startDate") != null ? request.getAttribute("startDate") : ""%>">
-
+               value="<%=session.getAttribute("startDate") != null ? session.getAttribute("startDate") : ""%>">
         <label>Đến ngày:</label>
         <input type="date" name="endDate"
-               value="<%=request.getAttribute("endDate") != null ? request.getAttribute("endDate") : ""%>">
+               value="<%=session.getAttribute("endDate") != null ? session.getAttribute("endDate") : ""%>">
         <input type="submit" value="Xem thống kê">
     </form>
 
