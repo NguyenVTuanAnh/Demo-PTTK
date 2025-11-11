@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,6 +86,11 @@
 <body>
 <div class="container">
     <h1>Đăng ký thẻ bạn đọc</h1>
+    <c:if test="${not empty errorMessage}">
+        <div style="color: red; font-weight: bold; margin-bottom: 15px;">
+                ${errorMessage}
+        </div>
+    </c:if>
 
     <form action="card-registration" method="post">
         <table>

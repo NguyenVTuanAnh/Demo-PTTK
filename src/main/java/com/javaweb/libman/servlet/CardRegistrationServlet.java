@@ -64,7 +64,9 @@ public class CardRegistrationServlet extends HttpServlet {
             if (success) {
                 resp.sendRedirect("reader-home.jsp");
             } else {
-                resp.sendRedirect("card-registration.jsp");
+                req.setAttribute("reader", currentUser);
+                req.setAttribute("errorMessage", " Bạn đã có thẻ còn hạn. Không thể đăng ký thêm.");
+                req.getRequestDispatcher("card-registration.jsp").forward(req, resp);
             }
         }
 

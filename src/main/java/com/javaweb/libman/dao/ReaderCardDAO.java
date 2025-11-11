@@ -9,11 +9,18 @@ import java.sql.SQLException;
 public class ReaderCardDAO extends DAO{
 
     public boolean addCard(ReaderCard readerCard){
+//        String sql = """
+//            INSERT INTO reader_card (issue_date, expiry_date, note, reader_id)
+//            VALUES (?, ?, ?, ?)
+//        """;
         String sql = """
             INSERT INTO reader_card (issue_date, expiry_date, note, reader_id)
-            VALUES (?, ?, ?, ?)
+            SELECT ?, ?, ?, ?
+            WHERE NOT EXISTS (
+                SELECT 1 FROM reader_card 
+                WHERE reader_id = ? AND expiry_date >= CURRENT_DATE
+            )
         """;
-
         try {
             Connection conn = getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -21,9 +28,9 @@ public class ReaderCardDAO extends DAO{
             stmt.setDate(2, java.sql.Date.valueOf(readerCard.getExpiryDate()));
             stmt.setString(3, readerCard.getNote());
             stmt.setInt(4, readerCard.getReader().getId());
-
-            stmt.executeUpdate();
-            return true;
+            stmt.setInt(5, readerCard.getReader().getId());
+            int rows = stmt.executeUpdate();
+            return rows > 0;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
